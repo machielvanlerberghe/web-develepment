@@ -1,0 +1,33 @@
+body
+{
+    width: 1200px;
+    margin:auto;
+    
+}
+.header{
+    background-image: url(img/header.jpg);
+    color: #fff;
+    height: 100px;
+}
+.header h1{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+nav{
+    background-color:#505050;
+}
+nav a{
+    color:mediumseagreen;
+    text-decoration: none;
+}
+article h1{
+    text-decoration: underline;
+    color: #505050;
+    font-size: 30px;
+}
+article{
+    background-color: lightgray;
+    margin:10px;
+    padding: 5px;
+}
