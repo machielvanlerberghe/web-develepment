@@ -32,7 +32,6 @@ figcaption {
 @media screen and (max-width: 767px) {
 	figure {
 		margin: auto;
-		max-width: 100%;
 	}
 }
 
@@ -40,7 +39,7 @@ figcaption {
 @media screen and (min-width: 992px)
 {figure
 {
-	max-width: 50%;
+	max-width: 29%;
 	padding: 10px;
 	height: auto;
 	float: left;
@@ -56,11 +55,10 @@ figcaption {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
 	figure{
-		max-width: 33.33%;
+		max-width: 40%;
 		height: auto;
 		float: left;
 		margin-left: 20px;
-
 
 
 

@@ -90,6 +90,7 @@ html {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  height:100px;
 }
 
 .col {
@@ -1909,4 +1910,10 @@ html {
     align-self: stretch !important;
   }
 }
-/*# sourceMappingURL=oef3-grid.css.map */
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=bootstrap_1-grid.css.map */
