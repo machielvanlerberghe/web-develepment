@@ -1,0 +1,201 @@
+/** Volgende CSS gaan we ze geven **/
+.respimg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+*{
+    margin: 0px;
+    font-family: Helvetica,sans-serif;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-decoration: underline 2px;
+    color:black;
+}
+h2{
+
+}
+
+header img{
+height: 50px;
+
+}
+header{
+    border-bottom: 1px solid #ebe8e8;
+    width: 100%;
+    margin: auto;
+}
+@media only screen and (max-width: 770px){
+    header{
+        width: 600px;
+    }
+    .snelmenu{
+        width: 600px;
+    }
+    .recipes_main{
+        width: 600px;
+    }
+    .recommended_main{
+        width: 600px;
+    }
+    .recommended{
+        grid-template-columns: auto;
+    }
+}
+@media only screen and (min-width: 770px){
+    header{
+        width: 750px;
+    }
+    .snelmenu{
+        width: 750px;
+    }
+    .recipes_main{
+        width: 750px;
+    }
+    .recommended_main{
+        width: 600px;
+    }
+    .recommended{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    header{
+        width: 980px;
+    }
+    .snelmenu{
+        width: 980px;
+    }
+    .recipes_main{
+        width: 980px;
+    }
+    .recommended_main{
+        width: 600px;
+    }
+    .recommended{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (min-width: 800px){
+    .main-header{
+        font-size: 5em;
+    }
+}
+.snelmenu{
+    color: #5b4746;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    margin: auto;
+    font-size: 13px;
+}
+.snelmenu span{
+    display: block;
+    margin: 5px;
+    border-right:#ebe8e8 solid 2px;
+    text-align: center;
+}
+.snelmenu span:last-child {
+border-right: 0;
+}
+.snelmenu span a:hover{
+    text-decoration: underline 2px solid #fff100;
+}
+a{
+    color:#5b4746;
+    font-size: 13px;
+    text-decoration: none;
+}
+.main{
+    border-top: 1px solid #ebe8e8;
+}
+.main-header{
+    background-image:  url("images/headerimage.jpg");
+    height: 500px;
+    width: 100%;
+    color:white;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    padding-top: 210px;
+    background-size: cover;
+    text-shadow: 2px 2px #8D99AE;
+}
+
+.recipes_main
+{
+    margin-top: 50px;
+    align-content: center;
+    margin: auto;
+}
+.main-recipes-grid
+{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.recipes_main_item{
+    margin: 15px;
+    border-top: #ddd solid 3px;
+}
+.bordertop{
+    border-top: #ddd solid 3px;
+    margin-right: 1.5em;
+    padding-top: 1em;
+}
+.Main-Recipe-Item-Small-Title {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color:#ff4d56;
+}
+.Main-Recipe-Item-Title{
+    text-decoration: none;
+    color: black;
+}
+.Main-Recipe-Item-Body{
+    color: #666;
+    line-height: 2;
+}
+.Main-Recipe-Item-Auteur{
+    padding-right: 10px;
+    border-right: 2px solid #ebe8e8;
+    font-style: italic;
+    float: left;
+}
+.Main-Recipe-Item-Timestamp{
+color: #666;
+    padding-left: 10px;
+    float: left ;
+}
+.recommended_main{
+    margin-top: 50px;
+    margin: auto;
+}
+.recommended{
+    display: grid;
+    align-content: center;
+    grid-gap: 25px;
+}
+.footer{
+
+    line-height: 2em;
+    align-content: center;
+    margin: auto;
+}
+.footer #left{
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+.footer #right{
+    float: left;
+    text-align:left;
+    color: white;
+    background-color: black;
+    width: 50%;
+}
