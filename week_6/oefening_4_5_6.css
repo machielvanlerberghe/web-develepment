@@ -19,8 +19,8 @@ ul{
     list-style-image: url('img_1.png');
 }
 .checklist li{
-    list-style-image: url('checkbox_unchecked.png')
+    list-style-image: url('checkbox_unchecked.png');
 }
 .checklist .checked{
-    list-style-image: url('checkbox_checked.png')
+    list-style-image: url('checkbox_checked.png');
 }
