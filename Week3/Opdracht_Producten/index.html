@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Producten</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script type="text/javascript" charset="utf-8"
-            src="scripts/code.js"></script>
-    <title>opdracht producten</title>
 </head>
 <body>
-<table style="width:100%">
-    <tr>
-        <th>producten</th>
-        <th>prijs</th>
-        <th>aantal</th>
-        <th>btw</th>
-        <th>subtotaal</th>
-    </tr>
-    <tr>
-        <td>product 1</td>
-        <td class="prijs">10.00 Eur</td>
-        <td><input type="number" value="0"></td>
-        <td class="btw">6 %</td>
-        <td class="subtotaal">0.00 Eur</td>
-    </tr>
-    <tr>
-        <td>product 2</td>
-        <td class="prijs">15.00 Eur</td>
-        <td><input type="number" value="0"></td>
-        <td class="btw">21 %</td>
-        <td class="subtotaal">0.00 Eur</td>
-    </tr>
-    <tr>
-        <td>product 3</td>
-        <td class="prijs">12.20 Eur</td>
-        <td><input type="number" value="0"></td>
-        <td class="btw">21 %</td>
-        <td class="subtotaal">0.00 Eur</td>
-    </tr>
-    <tr>
-        <td colspan="4">totaal</td>
-        <td class="totaal">0.00 Eur</td>
-    </tr>
-</table>
-<button type="button">Herberekenen</button>
+<main>
+    <section class="center">
+        <table>
+            <thead>
+            <tr>
+                <th>Producten</th>
+                <th>Prijs</th>
+                <th>Aantal</th>
+                <th>Btw</th>
+                <th>Subtotaal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td id="priceProduct1">10.00</td>
+                <td><input type="number" id="product1"></td>
+                <td>6%</td>
+                <td class="subtotaal">0.00</td>
+            </tr>
+
+            <tr>
+                <td>Product 2</td>
+                <td id="priceProduct2">15.00</td>
+                <td><input type="number" id="product2"></td>
+                <td>21%</td>
+                <td class="subtotaal">0.00</td>
+            </tr>
+
+            <tr>
+                <td>Product 3</td>
+                <td id="priceProduct3">12.20</td>
+                <td><input type="number" id="product3"></td>
+                <td>21%</td>
+                <td class="subtotaal">0.00</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Totaal</td>
+                <td id="totaal">0.00</td>
+            </tr>
+            </tbody>
+        </table>
+        <input type="button" value="Herberkenen" id="herbereken">
+    </section>
+</main>
+<script src="scripts/code.js"></script>
 </body>
 </html>
