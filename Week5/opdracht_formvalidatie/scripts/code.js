@@ -99,7 +99,7 @@ const valideerAantalkinderen = () => {
 		txtAantalkinderen.className="invalid"; // invalid class instellen
 		errAantalkinderen.innerHTML = "is geen positief getal";
 	}
-	else if (Aantalkinderen === NaN) {
+	else if (isNaN(txtAantalkinderen.value)) {
 		txtAantalkinderen.className="invalid"; // invalid class instellen
 		errAantalkinderen.innerHTML = "is geen getal";
 	}

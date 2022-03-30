@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Demonstratie slider</title>
+
+	<link rel="stylesheet" href="styles/styles.css"/>
+</head> 
+<body> 
+<section class="box">
+	<div class="swatch" id="swatch" style="background: rgb(25, 170, 53);"></div>
+	0<input id="slider1" type="range" value="128" min="0" max="255" oninput="this.nextElementSibling.value = this.value">255
+	<output>128</output><br>
+
+	0<input id="slider2" type="range" value="128" min="0" max="255" oninput="this.nextElementSibling.value = this.value">255
+	<output>128</output><br>
+
+	0<input id="slider3" type="range" value="128" min="0" max="255" oninput="this.nextElementSibling.value = this.value">255
+	<output>128</output>
+	<button>Save</button>
+</section>
+
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+</body> 
+</html> 

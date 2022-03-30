@@ -1,0 +1,24 @@
+.swatch {
+    display: flex;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 0 0 0;
+    height: 5em;
+    width: 5em;
+    float: right;
+
+}
+.box
+{
+    display: inline-block;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 0 0 0 1em;
+    height: 5em;
+    width: 20em;
+    padding: 20px;
+}
+button {
+    float: right;
+    float: bottom;
+}
