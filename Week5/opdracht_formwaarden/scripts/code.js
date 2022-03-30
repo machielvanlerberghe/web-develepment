@@ -1,23 +1,53 @@
 const setup = () => {
-
-    let submitBtn = document.getElementById('submit');
-
-    submitBtn.addEventListener("click", showResult)
+    let submit = document.getElementById('submit');
+    submit.addEventListener("click", setup2);
 }
 
-const showResult = (event) => {
-    event.preventDefault()
+const setup2 = () => {
 
-    let isRoker = document.getElementById("isRoker").checked
-    let moedertaal = document.querySelector('input[name="rate"]:checked').value;
-    let favorieteBuurlandSelect = document.getElementById('favorieteBuurland');
-    let favorieteBuurland = favorieteBuurlandSelect.options[favorieteBuurlandSelect.selectedIndex].text;
+    let isRoker = false;
+    let roker = document.getElementById("isroker").checked;
 
-    isRoker ? console.log("is een roker") : console.log("is geen roker")
-    console.log(`moedertaal is ${moedertaal}`)
-    console.log(`Favoriete Buurland is ${favorieteBuurland}`)
+    let moedertaal = "";
+    let moedertalen = document.getElementsByName("moeder");
+
+    for(let i = 0; i < moedertalen.length;i++) {
+        if(moedertalen[i].checked === true){
+            moedertaal = moedertalen[i].value;
+        }
+    }
+
+    if(roker === true) {
+        isRoker = "is een roker";
+    }
+    else
+    {
+        isRoker = "is geen roker"
+    }
+
+    var getValue = document.getElementsByName('buurland')[0];
+
+    let buurland = getValue.value;
+
+    var select = document.getElementById('tabel');
+    var option = select.options[select.selectedIndex].text;
+
+    console.log(isRoker);
+
+    if(moedertaal === "Nederlands") {
+        console.log("moedertaal is nl");
+    }
+    else if( moedertaal === "Frans") {
+        console.log("moedertaal is fr");
+    }
+    else if(moedertaal === "Engels") {
+        console.log("moedertaal is en");
+    }
+    console.log("Favoriete buurland is " + buurland);
+    console.log(option);
+
 
 
 }
 
-window.addEventListener("load", setup);
+window.addEventListener("load",setup);
