@@ -1,35 +1,70 @@
-const update = () => {
-	let slider1 = document.getElementById("slider1");
-	let slider2 = document.getElementById("slider2");
-	let slider3 = document.getElementById("slider3");
-
-	let value1 = slider1.value;
-	let value2 = slider2.value;
-	let value3 = slider3.value;
-
-	let background = document.getElementsByClassName("swatch");
-	background[0].style.backgroundColor = "rgb(" + value1 + ", " + value2 + ", " + value3 + ")";
-
-	console.log(value1)
-}
-
 const setup = () => {
-	slider1 = document.getElementById("slider1");
-	slider2 = document.getElementById("slider2");
-	slider3 = document.getElementById("slider3");
-	button = document.getElementById("button")
-	slider1.addEventListener("change", update)
-	slider2.addEventListener("change", update)
-	slider3.addEventListener("change", update)
 
-	let value1 = slider1.value;
-	let value2 = slider2.value;
-	let value3 = slider3.value;
-	button.addEventListener("click", save(value1, value2, value3))
+	let sliders = document.getElementsByClassName("slider");
+	let saveButton = document.getElementById("save");
+
+	saveButton.addEventListener("click", saveColor)
+
+	for (let i = 0; i < sliders.length; i++) {
+		sliders[i].addEventListener("change", changeColorBySliders);
+		sliders[i].addEventListener("input", changeColorBySliders);
+	}
+
 }
 
-const save = (red,green,blue) => {
-	let save = document.createElement('div')
-	save.style.backgroundColor("rgb(" + red + ", " + green + ", " + blue + ")")
+const changeColorBySliders = () => {
+	let sliders = document.getElementsByClassName("slider");
+	let redLabel = document.getElementById("redLabel");
+	let blueLabel = document.getElementById("blueLabel");
+	let greenLabel = document.getElementById("greenLabel");
+	let colorDiv = document.getElementById("color");
+
+	let red = sliders[0].value;
+	let green = sliders[1].value;
+	let blue = sliders[2].value;
+
+	redLabel.textContent = `Red: ${red}`;
+	greenLabel.textContent = `Green: ${green}`;
+	blueLabel.textContent = `Blue: ${blue}`;
+
+	colorDiv.style.backgroundColor = "rgb(" + red +', '+ green +', '+ blue + ')'
 }
+
+const saveColor = () => {
+	let colorPickerDiv = document.getElementById("color");
+	let swatch = document.createElement("div")
+	let deleteButton = document.createElement("button");
+	let savedSwatches = document.getElementById("savedSwatches");
+
+	deleteButton.textContent = "X"
+	deleteButton.addEventListener("click", deleteSwatch);
+
+	let color = "";
+	colorPickerDiv.style.backgroundColor == ""? color = "black" : color = colorPickerDiv.style.backgroundColor
+
+	swatch.style.backgroundColor = color;
+	swatch.style.width = "50px";
+	swatch.style.height = "50px";
+	swatch.style.borderRadius = "10px";
+
+	swatch.addEventListener("click", changeColor);
+	swatch.appendChild(deleteButton)
+	savedSwatches.appendChild(swatch)
+}
+
+const deleteSwatch = (event) => {
+	let swatch = event.target.parentElement;
+	swatch.remove();
+}
+
+const changeColor = (event) => {
+	let swatch = event.target;
+	let colorPickerDiv = document.getElementById("color");
+	colorPickerDiv.style.backgroundColor = swatch.style.backgroundColor;
+}
+
+
+
+
+
 window.addEventListener("load", setup);

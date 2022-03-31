@@ -1,11 +1,11 @@
 const setup = () => {
 
-    let div = document.getElementsByTagName('div')[0];
+    let p = document.getElementsByTagName('p')[0];
     let button = document.createElement("button")
     button.style.backgroundColor = 'red';
     let buttontext = document.createTextNode('Klik hier');
     button.appendChild(buttontext);
-    div.prepend(button);
+    p.prepend(button);
     button.addEventListener("click", klik);
 }
 

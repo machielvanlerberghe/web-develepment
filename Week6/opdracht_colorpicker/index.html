@@ -1,27 +1,32 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>Demonstratie slider</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colorpicker</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main>
+	<section class="center">
+		<div class="colorPickerContainer">
+			<div class="colorPicker">
+				<div class="colorPicker--options">
+					0 <input type="range" class="slider" value="0" min="0" max="255" id="red" /> 255 <label for="red" id="redLabel">Red: 0</label>
+					<br>
+					0 <input type="range" class="slider" value="0" min="0" max="255" id="green" /> 255 <label for="green" id="greenLabel">Green: 0</label>
+					<br>
+					0 <input type="range" class="slider" value="0" min="0" max="255" id="blue" /> 255 <label for="blue" id="blueLabel">Blue: 0</label>
+				</div>
 
-	<link rel="stylesheet" href="styles/styles.css"/>
-</head> 
-<body> 
-<section class="box">
-	<div class="swatch" id="swatch" style="background: rgb(25, 170, 53);"></div>
-	0<input id="slider1" type="range" value="128" min="0" max="255" oninput="this.nextElementSibling.value = this.value">255
-	<output>128</output><br>
-
-	0<input id="slider2" type="range" value="128" min="0" max="255" oninput="this.nextElementSibling.value = this.value">255
-	<output>128</output><br>
-
-	0<input id="slider3" type="range" value="128" min="0" max="255" oninput="this.nextElementSibling.value = this.value">255
-	<output>128</output>
-	<button id="button">Save</button>
-</section>
-<section class="colors">
-
-</section>
-
-<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
-</body> 
-</html> 
+				<div id="color"></div>
+			</div>
+			<button type="submit" id="save">Save</button>
+			<h1>Saved colors</h1>
+			<br>
+			<div id="savedSwatches"></div>
+		</div>
+	</section>
+</main>
+<script src="scripts/code.js"></script>
+</body>
+</html>
