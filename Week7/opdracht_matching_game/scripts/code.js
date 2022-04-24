@@ -14,7 +14,7 @@ const cards = new Map([
 
 const setup = () => {
     generateCards()
-    setTimeout(hideCards, 10000);
+    setTimeout(hideCards, 1000);
     shuffle()
 }
 
