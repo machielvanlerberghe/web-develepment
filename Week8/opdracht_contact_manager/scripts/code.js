@@ -25,6 +25,7 @@ const bewaarBewerktePersoon = () => {
             option.value = persoon.voornaam + persoon.familienaam
             option.innerHTML = persoon.voornaam + " " + persoon.familienaam
             let list = document.getElementById("lstPersonen")
+            list.options[index] = option;
             personen[index] = persoon;
         }
         else{
