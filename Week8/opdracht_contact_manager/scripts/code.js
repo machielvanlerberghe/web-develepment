@@ -35,6 +35,7 @@ const bewaarBewerktePersoon = () => {
             list.appendChild(option);
             personen.push(persoon);
         }
+        lijst.selectedIndex = index;
 
     }
     // indien ok, bewaar de ingegeven data.
