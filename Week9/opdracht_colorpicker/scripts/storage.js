@@ -19,14 +19,26 @@ const restoreSliderValues = () => {
 };
 
 const storeSwatches = () => {
-    let swatches = document.getElementsByClassName("swatch");
-    console.log(swatches)
-    localStorage.setItem("swatches[0]", red);
-    let lijst = {};
-    lijst.add(buildSwatchComponent(red, green, blue));
+    let swatches = document.getElementsByClassName("swatch")
+    kleuren = [];
+    for (let i = 0; i < swatches.length; i++) {
+        RGB ={
+            rood: swatches[i].getAttribute('data-red'),
+            groen: swatches[i].getAttribute('data-green'),
+            blauw: swatches[i].getAttribute('data-blue')
+        }
+        kleuren.push(RGB);
+    }
+    localStorage.setItem('kleurenStorage', JSON.stringify(kleuren));
+    console.log(localStorage.getItem('kleurenStorage'))
 };
 
 
 const restoreSwatches = () => {
-
+    if(localStorage.getItem('kleurenStorage') !== null){
+        kleuren = JSON.parse(localStorage.getItem('kleurenStorage'))
+        for (let i = 0; i < kleuren.length; i++) {
+            addSwatchComponent(kleuren[i].rood, kleuren[i].groen,kleuren[i].blauw)
+        }
+    }
 };
