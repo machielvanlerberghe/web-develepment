@@ -1,0 +1,51 @@
+body{
+    font-family: sans-serif;
+    margin: auto;
+    width: 80%;
+}
+p{
+    height: 1em;
+    margin: 0 0 1em 0;
+    color: lightgray;
+}
+
+h1{
+}
+h3{
+    size: 0.1em;
+}
+.searchBar{
+    width: 100%;
+    height: 3em;
+}
+.go{
+    width: 100%;
+    height: 3em;
+    background-color: limegreen;
+    border-color: white;
+    border-radius: 1em;
+    box-shadow: none;
+}
+.card{
+    margin: 1em 0em 0em 1em;
+    height: 8rem;
+    width: 95% !important;
+}
+.card input{
+    width: 20%;
+}
+.card p{
+    margin-left: 1em;
+    color: black;
+}
+.history{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+}
+a{
+    border: 1px solid black;
+    margin-left: 1em;
+    background-color: lightgray;
+    width: 2rem;
+}
